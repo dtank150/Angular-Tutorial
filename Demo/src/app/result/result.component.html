@@ -1,0 +1,21 @@
+<h2 class="text-center m-5">Result Data</h2>
+<div class="center">
+    <h3 class="text-center">Result Component</h3>
+    <hr>
+    <h4 *ngFor="let name of names" class="text-center m-4"> 
+     <h4 *ngFor="let subject of subjects">
+    <h4 *ngFor="let mark of marks">
+        Name: {{name}}  =>  Subject: {{subject}}  =>  Marks: {{mark}}
+    </h4>
+    </h4>
+    </h4>
+        
+</div>
+<hr>
+<div class="col-md-12 text-center">
+    <div (mouseover)='over()' (mouseleave)='leave()' style="height:40px; width:80px; background:#e2e2e2" class="m-2 text-center"><b>Hello</b></div>
+    <input type="text" #mark (keyup)="display(mark)" class="m-2">
+    <input type="text" #subject (keydown)="func(subject)" class="m-2"> 
+    <input type="text" #name (keyup.enter)="show(name)" class="m-2">
+    <button type="button" (click)="submit(name,mark,subject)" class="m-2">Submit</button>
+ </div>

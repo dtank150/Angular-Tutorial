@@ -1,0 +1,17 @@
+<div class="container">
+    <h2 class="text-center m-4">Student details</h2>
+    <div class="card-columns">
+      <div *ngFor="let stud of students; let i = index" class="card bg-info">
+        <div [routerLink]="['/studentdetails',{id:i}]" class="card-header text-uppercase text-center">
+            <h4>{{stud.erno}}</h4>
+        </div>
+        <div class="card-body text-center">
+          <img  [src]="stud.profile" class="rounded-circle">  
+          <h5 class="card-text">Name: {{stud.name}}</h5>
+          <h5 class="card-text">DOB: {{stud.DOB}}</h5>
+          <h5 class="card-text">Department: {{stud.department}}</h5>
+        </div>
+      </div>
+      
+    </div>
+  </div>
